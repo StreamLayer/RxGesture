@@ -18,7 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#if os(iOS)
+#if os(iOS) || os(tvOS)
 import UIKit
 #elseif os(OSX)
 import AppKit
@@ -65,7 +65,7 @@ public final class RxGestureRecognizerDelegate: NSObject, GestureRecognizerDeleg
 
     public var simultaneousRecognitionPolicy: GestureRecognizerDelegatePolicy<(GestureRecognizer, GestureRecognizer)> = .always
 
-    #if os(iOS)
+    #if os(iOS) || os(tvOS)
     // Workaround because we can't have stored properties with @available annotation
     private var _pressReceptionPolicy: Any?
 
@@ -129,7 +129,7 @@ public final class RxGestureRecognizerDelegate: NSObject, GestureRecognizerDeleg
         )
     }
 
-    #if os(iOS)
+    #if os(iOS) || os(tvOS)
 
     @available(iOS 9.0, *)
     public func gestureRecognizer(

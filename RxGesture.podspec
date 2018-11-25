@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/*.swift'
 
-  s.tvos.source_files     = 'Pod/Classes/iOS/*.swift'
+  s.tvos.source_files     = 'Pod/Classes/tvOS/*.swift'
   s.ios.source_files      = 'Pod/Classes/iOS/*.swift'
   s.osx.source_files      = 'Pod/Classes/OSX/*.swift'
 
