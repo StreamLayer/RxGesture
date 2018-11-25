@@ -23,9 +23,11 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
+  s.tvos.deployment_target = '10.0'
 
   s.source_files = 'Pod/Classes/*.swift'
 
+  s.tvos.source_files     = 'Pod/Classes/iOS/*.swift'
   s.ios.source_files      = 'Pod/Classes/iOS/*.swift'
   s.osx.source_files      = 'Pod/Classes/OSX/*.swift'
 
