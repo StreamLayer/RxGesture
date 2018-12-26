@@ -45,6 +45,7 @@
 		87F8F7331E511E8600C3B1BE /* SharedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5177C1E4FED3900A65547 /* SharedTypes.swift */; };
 		87F8F7341E511E8600C3B1BE /* View+RxGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5177D1E4FED3900A65547 /* View+RxGesture.swift */; };
 		87F8F7371E511E9D00C3B1BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CC4C4F1DEBACC7009ED835 /* Foundation.framework */; };
+		D8B0A5F821D3D4D50093D997 /* UIPanGestureRecognizer+RxGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0A5F721D3D4D50093D997 /* UIPanGestureRecognizer+RxGesture.swift */; };
 		D8F765CC21AAF0A3009D6468 /* UITapGestureRecognizer+RxGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F765CB21AAF0A3009D6468 /* UITapGestureRecognizer+RxGesture.swift */; };
 		D8F765CD21AAF114009D6468 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3F31FAE4EE000A61D4F /* RxCocoa.framework */; };
 		D8F765CE21AAF117009D6468 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3F41FAE4EE000A61D4F /* RxSwift.framework */; };
@@ -98,6 +99,7 @@
 		87A5177D1E4FED3900A65547 /* View+RxGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+RxGesture.swift"; sourceTree = "<group>"; };
 		87AF2B5F1FAF1D3E0002FC29 /* RxGestureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxGestureTests.swift; sourceTree = "<group>"; };
 		87F8F7221E511E2E00C3B1BE /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B0A5F721D3D4D50093D997 /* UIPanGestureRecognizer+RxGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPanGestureRecognizer+RxGesture.swift"; sourceTree = "<group>"; };
 		D8F765C121AAEFA6009D6468 /* RxGesture_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F765CB21AAF0A3009D6468 /* UITapGestureRecognizer+RxGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+RxGesture.swift"; sourceTree = "<group>"; };
 		D8F765CF21AAF11B009D6468 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				D8F765CB21AAF0A3009D6468 /* UITapGestureRecognizer+RxGesture.swift */,
+				D8B0A5F721D3D4D50093D997 /* UIPanGestureRecognizer+RxGesture.swift */,
 			);
 			path = tvOS;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				D8F765D421AAF189009D6468 /* SharedTypes.swift in Sources */,
 				D8F765CC21AAF0A3009D6468 /* UITapGestureRecognizer+RxGesture.swift in Sources */,
 				D8F765D521AAF18C009D6468 /* GestureRecognizer+RxGesture.swift in Sources */,
+				D8B0A5F821D3D4D50093D997 /* UIPanGestureRecognizer+RxGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
