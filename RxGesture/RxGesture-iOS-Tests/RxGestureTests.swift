@@ -16,49 +16,48 @@ import RxBlocking
 
 class RxGestureTests: XCTestCase {
 
-    var disposeBag: DisposeBag!
-    var view: UIView!
-    var gesture: UIGestureRecognizer!
+  var disposeBag: DisposeBag!
+  var view: UIView!
+  var gesture: UIGestureRecognizer!
 
-    override func setUp() {
-        super.setUp()
-        disposeBag = DisposeBag()
-        view = UIView()
-        gesture = UIGestureRecognizer()
-    }
+  override func setUp() {
+      super.setUp()
+      disposeBag = DisposeBag()
+      view = UIView()
+      gesture = UIGestureRecognizer()
+  }
 
-    override func tearDown() {
-        super.tearDown()
-        disposeBag = nil
-        view = nil
-        gesture = nil
-    }
+  override func tearDown() {
+      super.tearDown()
+      disposeBag = nil
+      view = nil
+      gesture = nil
+  }
 
-    func testObservable() {
+  func testObservable() {
 
-        let states: [UIGestureRecognizer.State] = [.began, .changed, .changed, .changed, .ended]
+    let states: [UIGestureRecognizer.State] = [.began, .changed, .changed, .changed, .ended]
 
-        send(states)
+    send(states)
 
-        let expected = [.possible] + states
+    let expected = [.possible] + states
 
-        let result = try? view.rx.gesture(gesture)
-            .map { $0.state }
-            .take(expected.count)
-            .toBlocking(timeout: 1)
-            .toArray()
+    let result = try? view.rx.gesture(gesture)
+        .map { $0.state }
+        .take(expected.count)
+        .toBlocking(timeout: 1)
+        .toArray()
 
-        XCTAssertEqual(result ?? [], expected)
-    }
+    XCTAssertEqual(result ?? [], expected)
+  }
 
-    func send(_ states: [UIGestureRecognizer.State]) {
-        guard let first = states.first else {
-            return
-        }
-        DispatchQueue.main.async {
-            self.gesture.state = first
-            self.send(Array(states[1...]))
-        }
-    }
-
+  func send(_ states: [UIGestureRecognizer.State]) {
+      guard let first = states.first else {
+          return
+      }
+      DispatchQueue.main.async {
+          self.gesture.state = first
+          self.send(Array(states[1...]))
+      }
+  }
 }

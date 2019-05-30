@@ -21,7 +21,7 @@
 import RxSwift
 import RxCocoa
 
-extension Reactive where Base: View {
+public extension Reactive where Base: View {
 
     /**
      Reactive wrapper for multiple view gesture recognizers.
@@ -32,7 +32,7 @@ extension Reactive where Base: View {
      - parameter factories: a `(Factory + state)` collection you want to use to create the `GestureRecognizers` to add and observe
      - returns: a `ControlEvent<G>` that re-emit the gesture recognizer itself
      */
-    public func anyGesture(_ factories: (AnyFactory, when: GestureRecognizerState)...) -> ControlEvent<GestureRecognizer> {
+    func anyGesture(_ factories: (AnyFactory, when: GestureRecognizerState)...) -> ControlEvent<GestureRecognizer> {
         let observables = factories.map { gesture, state in
             self.gesture(gesture).when(state).asObservable() as Observable<GestureRecognizer>
         }
@@ -49,7 +49,7 @@ extension Reactive where Base: View {
      - parameter factories: a `Factory` collection you want to use to create the `GestureRecognizers` to add and observe
      - returns: a `ControlEvent<G>` that re-emit the gesture recognizer itself
      */
-    public func anyGesture(_ factories: AnyFactory...) -> ControlEvent<GestureRecognizer> {
+    func anyGesture(_ factories: AnyFactory...) -> ControlEvent<GestureRecognizer> {
         let observables = factories.map { factory in
             self.gesture(factory).asObservable() as Observable<GestureRecognizer>
         }
@@ -66,7 +66,7 @@ extension Reactive where Base: View {
      - parameter factory: a `Factory` you want to use to create the `GestureRecognizer` to add and observe
      - returns: a `ControlEvent<G>` that re-emit the gesture recognizer itself
      */
-    public func gesture<G>(_ factory: Factory<G>) -> ControlEvent<G> {
+    func gesture<G>(_ factory: Factory<G>) -> ControlEvent<G> {
         return self.gesture(factory.gesture)
     }
 
@@ -79,7 +79,7 @@ extension Reactive where Base: View {
      - parameter gesture: a `GestureRecognizer` you want to add and observe
      - returns: a `ControlEvent<G>` that re-emit the gesture recognizer itself
      */
-    public func gesture<G: GestureRecognizer>(_ gesture: G) -> ControlEvent<G> {
+    func gesture<G: GestureRecognizer>(_ gesture: G) -> ControlEvent<G> {
 
         let source = Observable.deferred {
             [weak control = self.base] () -> Observable<G> in

@@ -37,13 +37,13 @@ extension Factory where Gesture == GestureRecognizer {
     }
 }
 
-extension Reactive where Base: View {
+public extension Reactive where Base: View {
 
     /**
      Returns an observable `UITapGestureRecognizer` events sequence
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public func tapGesture(configuration: TapConfiguration? = nil) -> TapControlEvent {
+  func tapGesture(configuration: TapConfiguration? = nil) -> TapControlEvent {
         return gesture(make(configuration: configuration))
     }
 }

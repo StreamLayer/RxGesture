@@ -61,13 +61,13 @@ extension Factory where Gesture == GestureRecognizer {
     }
 }
 
-extension Reactive where Base: View {
+public extension Reactive where Base: View {
 
     /**
      Returns an observable `NSClickGestureRecognizer` events sequence
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public func clickGesture(buttonMask: Int, configuration: ClickConfiguration? = nil) -> ClickControlEvent {
+    func clickGesture(buttonMask: Int, configuration: ClickConfiguration? = nil) -> ClickControlEvent {
         return gesture(make(mask: buttonMask, configuration: configuration))
     }
 
@@ -75,7 +75,7 @@ extension Reactive where Base: View {
      Returns an observable `NSClickGestureRecognizer` events sequence
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public func leftClickGesture(configuration: ClickConfiguration? = nil) -> ClickControlEvent {
+    func leftClickGesture(configuration: ClickConfiguration? = nil) -> ClickControlEvent {
         return gesture(make(mask: 0x1, configuration: configuration))
     }
 
@@ -83,7 +83,7 @@ extension Reactive where Base: View {
      Returns an observable `NSClickGestureRecognizer` events sequence
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public func rightClickGesture(configuration: ClickConfiguration? = nil) -> ClickControlEvent {
+    func rightClickGesture(configuration: ClickConfiguration? = nil) -> ClickControlEvent {
         return gesture(make(mask: 0x2, configuration: configuration))
     }
 

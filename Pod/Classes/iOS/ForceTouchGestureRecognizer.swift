@@ -70,24 +70,24 @@ extension Factory where Gesture == GestureRecognizer {
 }
 
 @available(iOS 9.0, *)
-extension Reactive where Base: View {
+public extension Reactive where Base: View {
 
     /**
      Returns an observable `ForceTouchGestureRecognizer` events sequence
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public func forceTouchGesture(configuration: ForceTouchConfiguration? = nil) -> ForceTouchControlEvent {
+    func forceTouchGesture(configuration: ForceTouchConfiguration? = nil) -> ForceTouchControlEvent {
         return gesture(make(configuration: configuration))
     }
 }
 
 @available(iOS 9.0, *)
-extension ObservableType where Element: ForceTouchGestureRecognizer {
+public extension ObservableType where Element: ForceTouchGestureRecognizer {
 
     /**
      Maps the observable `GestureRecognizer` events sequence to an observable sequence of force values.
      */
-    public func asForce() -> Observable<CGFloat> {
+    func asForce() -> Observable<CGFloat> {
         return self.map { $0.force }
     }
 }

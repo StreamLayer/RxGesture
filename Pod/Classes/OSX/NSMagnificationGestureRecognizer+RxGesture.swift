@@ -37,13 +37,13 @@ extension Factory where Gesture == GestureRecognizer {
     }
 }
 
-extension Reactive where Base: View {
+public extension Reactive where Base: View {
 
     /**
      Returns an observable `NSMagnificationGestureRecognizer` events sequence
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public func magnificationGesture(configuration: MagnificationConfiguration? = nil) -> MagnificationControlEvent {
+    func magnificationGesture(configuration: MagnificationConfiguration? = nil) -> MagnificationControlEvent {
         return gesture(make(configuration: configuration))
     }
 }

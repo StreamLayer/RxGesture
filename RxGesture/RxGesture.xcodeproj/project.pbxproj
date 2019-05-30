@@ -388,7 +388,6 @@
 					874DD3E61FAD0F7D00A61D4F = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
 					};
 					87F8F7211E511E2E00C3B1BE = {
 						CreatedOnToolsVersion = 8.2;
@@ -469,13 +468,14 @@
 				"$(SRCROOT)/../Carthage/Build/iOS/RxTest.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/RxRelay.framework",
 			);
 			name = "Copy carthage frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -561,6 +561,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../Carthage/Build/iOS",
 					"$(inherited)",
@@ -575,6 +576,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RxSwiftCommunity.RxGesture.iOS.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -588,6 +590,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../Carthage/Build/iOS",
 					"$(inherited)",
@@ -602,6 +605,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RxSwiftCommunity.RxGesture.iOS.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

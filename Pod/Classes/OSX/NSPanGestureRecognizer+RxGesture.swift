@@ -37,13 +37,13 @@ extension Factory where Gesture == GestureRecognizer {
     }
 }
 
-extension Reactive where Base: View {
+public extension Reactive where Base: View {
 
     /**
      Returns an observable `NSPanGestureRecognizer` events sequence
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public func panGesture(configuration: PanConfiguration? = nil) -> PanControlEvent {
+    func panGesture(configuration: PanConfiguration? = nil) -> PanControlEvent {
         return gesture(make(configuration: configuration))
     }
 }

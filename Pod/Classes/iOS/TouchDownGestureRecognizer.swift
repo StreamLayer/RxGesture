@@ -56,35 +56,35 @@ public typealias TouchDownConfiguration = Configuration<TouchDownGestureRecogniz
 public typealias TouchDownControlEvent = ControlEvent<TouchDownGestureRecognizer>
 public typealias TouchDownObservable = Observable<TouchDownGestureRecognizer>
 
-extension Factory where Gesture == GestureRecognizer {
+public extension Factory where Gesture == GestureRecognizer {
 
     /**
      Returns an `AnyFactory` for `TouchDownGestureRecognizer`
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public static func touchDown(configuration: TouchDownConfiguration? = nil) -> AnyFactory {
+    static func touchDown(configuration: TouchDownConfiguration? = nil) -> AnyFactory {
         return make(configuration: configuration).abstracted()
     }
 }
 
-extension Reactive where Base: View {
+public extension Reactive where Base: View {
 
     /**
      Returns an observable `TouchDownGestureRecognizer` events sequence
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public func touchDownGesture(configuration: TouchDownConfiguration? = nil) -> TouchDownControlEvent {
+    func touchDownGesture(configuration: TouchDownConfiguration? = nil) -> TouchDownControlEvent {
 
         return gesture(make(configuration: configuration))
     }
 }
 
-extension ObservableType where Element: TouchDownGestureRecognizer {
+public extension ObservableType where Element: TouchDownGestureRecognizer {
 
     /**
      Maps the observable `GestureRecognizer` events sequence to an observable sequence of force values.
      */
-    public func asTouches() -> Observable<Set<UITouch>> {
+    func asTouches() -> Observable<Set<UITouch>> {
         return self.map { $0.touches }
     }
 }

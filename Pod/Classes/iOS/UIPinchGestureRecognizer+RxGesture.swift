@@ -37,13 +37,13 @@ extension Factory where Gesture == GestureRecognizer {
     }
 }
 
-extension Reactive where Base: View {
+public extension Reactive where Base: View {
 
     /**
      Returns an observable `UIPinchGestureRecognizer` events sequence
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public func pinchGesture(configuration: PinchConfiguration? = nil) -> PinchControlEvent {
+    func pinchGesture(configuration: PinchConfiguration? = nil) -> PinchControlEvent {
         return gesture(make(configuration: configuration))
     }
 }

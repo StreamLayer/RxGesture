@@ -38,8 +38,8 @@ public typealias TransformConfiguration = Configuration<TransformGestureRecogniz
 public typealias TransformControlEvent = ControlEvent<TransformGestureRecognizers>
 public typealias TransformObservable = Observable<TransformGestureRecognizers>
 
-extension Reactive where Base: View {
-    public func transformGestures(
+public extension Reactive where Base: View {
+  func transformGestures(
         configuration: TransformConfiguration? = nil
         ) -> TransformControlEvent {
 

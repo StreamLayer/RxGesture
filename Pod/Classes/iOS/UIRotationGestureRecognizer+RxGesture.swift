@@ -37,13 +37,13 @@ extension Factory where Gesture == GestureRecognizer {
     }
 }
 
-extension Reactive where Base: View {
+public extension Reactive where Base: View {
 
     /**
      Returns an observable `UIRotationGestureRecognizer` events sequence
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public func rotationGesture(configuration: RotationConfiguration? = nil) -> RotationControlEvent {
+    func rotationGesture(configuration: RotationConfiguration? = nil) -> RotationControlEvent {
         return gesture(make(configuration: configuration))
     }
 }

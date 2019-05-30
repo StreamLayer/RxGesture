@@ -37,13 +37,13 @@ extension Factory where Gesture == GestureRecognizer {
     }
 }
 
-extension Reactive where Base: View {
+public extension Reactive where Base: View {
 
     /**
      Returns an observable `NSPressGestureRecognizer` events sequence
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
-    public func pressGesture(configuration: PressConfiguration? = nil) -> PressControlEvent {
+    func pressGesture(configuration: PressConfiguration? = nil) -> PressControlEvent {
         return gesture(make(configuration: configuration))
     }
 }
