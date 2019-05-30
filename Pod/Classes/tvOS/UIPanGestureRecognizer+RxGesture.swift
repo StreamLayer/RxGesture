@@ -43,19 +43,19 @@ public extension Reactive where Base: View {
    Returns an observable `UIPanGestureRecognizer` events sequence
    - parameter configuration: A closure that allows to fully configure the gesture recognizer
    */
-  public func panGesture(configuration: PanConfiguration? = nil) -> PanControlEvent {
+  func panGesture(configuration: PanConfiguration? = nil) -> PanControlEvent {
     return gesture(make(configuration: configuration))
   }
 }
 
-public extension ObservableType where E: UIPanGestureRecognizer {
+public extension ObservableType where Element: UIPanGestureRecognizer {
   
   /**
    Maps the observable `GestureRecognizer` events sequence to an observable sequence of translation values of the pan gesture in the coordinate system of the specified `view` alongside the gesture velocity.
    
    - parameter view: A `TargetView` value on which the gesture took place.
    */
-  public func asTranslation(in view: TargetView = .view) -> Observable<(translation: CGPoint, velocity: CGPoint)> {
+  func asTranslation(in view: TargetView = .view) -> Observable<(translation: CGPoint, velocity: CGPoint)> {
     return self.map { gesture in
       let view = view.targetView(for: gesture)
       return (

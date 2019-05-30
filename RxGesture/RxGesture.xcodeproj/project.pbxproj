@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,10 +14,8 @@
 		874DD3F11FAE4ED000A61D4F /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3EF1FAE4ED000A61D4F /* RxBlocking.framework */; };
 		874DD3F21FAE4ED000A61D4F /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3F01FAE4ED000A61D4F /* RxTest.framework */; };
 		874DD3F51FAE4EE100A61D4F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3F31FAE4EE000A61D4F /* RxCocoa.framework */; };
-		874DD3F61FAE4EE100A61D4F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3F31FAE4EE000A61D4F /* RxCocoa.framework */; };
 		874DD3F71FAE4EE100A61D4F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3F31FAE4EE000A61D4F /* RxCocoa.framework */; };
 		874DD3F81FAE4EE100A61D4F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3F41FAE4EE000A61D4F /* RxSwift.framework */; };
-		874DD3F91FAE4EE100A61D4F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3F41FAE4EE000A61D4F /* RxSwift.framework */; };
 		874DD3FA1FAE4EE100A61D4F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3F41FAE4EE000A61D4F /* RxSwift.framework */; };
 		87A5177E1E4FED3900A65547 /* TransformGestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A517691E4FED3900A65547 /* TransformGestureRecognizers.swift */; };
 		87A517801E4FED3900A65547 /* UILongPressGestureRecognizer+RxGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5176B1E4FED3900A65547 /* UILongPressGestureRecognizer+RxGesture.swift */; };
@@ -45,10 +43,13 @@
 		87F8F7331E511E8600C3B1BE /* SharedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5177C1E4FED3900A65547 /* SharedTypes.swift */; };
 		87F8F7341E511E8600C3B1BE /* View+RxGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5177D1E4FED3900A65547 /* View+RxGesture.swift */; };
 		87F8F7371E511E9D00C3B1BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CC4C4F1DEBACC7009ED835 /* Foundation.framework */; };
+		D8837ECD229F67CF00901C40 /* RxGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = F4CC4C201DEBA895009ED835 /* RxGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8837ED4229F699800901C40 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8837ED2229F699800901C40 /* RxSwift.framework */; };
+		D8837ED9229F717800901C40 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8837ED3229F699800901C40 /* RxCocoa.framework */; };
+		D8837EDA229F718900901C40 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8837ECF229F697200901C40 /* RxSwift.framework */; };
+		D8837EDB229F718900901C40 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8837ECE229F697200901C40 /* RxCocoa.framework */; };
 		D8B0A5F821D3D4D50093D997 /* UIPanGestureRecognizer+RxGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B0A5F721D3D4D50093D997 /* UIPanGestureRecognizer+RxGesture.swift */; };
 		D8F765CC21AAF0A3009D6468 /* UITapGestureRecognizer+RxGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F765CB21AAF0A3009D6468 /* UITapGestureRecognizer+RxGesture.swift */; };
-		D8F765CD21AAF114009D6468 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3F31FAE4EE000A61D4F /* RxCocoa.framework */; };
-		D8F765CE21AAF117009D6468 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874DD3F41FAE4EE000A61D4F /* RxSwift.framework */; };
 		D8F765D021AAF11C009D6468 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F765CF21AAF11B009D6468 /* Foundation.framework */; };
 		D8F765D121AAF182009D6468 /* View+RxGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5177D1E4FED3900A65547 /* View+RxGesture.swift */; };
 		D8F765D221AAF184009D6468 /* GestureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A5177A1E4FED3900A65547 /* GestureFactory.swift */; };
@@ -70,7 +71,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06002C42227C208400C7FBDD /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		874DD3DC1FAD067200A61D4F /* GestureRecognizer+RxGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GestureRecognizer+RxGesture.swift"; sourceTree = "<group>"; };
 		874DD3DF1FAD068500A61D4F /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		874DD3E01FAD068500A61D4F /* TouchDownGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchDownGestureRecognizer.swift; sourceTree = "<group>"; };
@@ -100,8 +100,12 @@
 		87A5177D1E4FED3900A65547 /* View+RxGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+RxGesture.swift"; sourceTree = "<group>"; };
 		87AF2B5F1FAF1D3E0002FC29 /* RxGestureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxGestureTests.swift; sourceTree = "<group>"; };
 		87F8F7221E511E2E00C3B1BE /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8837ECE229F697200901C40 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/tvOS/RxCocoa.framework; sourceTree = "<group>"; };
+		D8837ECF229F697200901C40 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/tvOS/RxSwift.framework; sourceTree = "<group>"; };
+		D8837ED2229F699800901C40 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		D8837ED3229F699800901C40 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
 		D8B0A5F721D3D4D50093D997 /* UIPanGestureRecognizer+RxGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPanGestureRecognizer+RxGesture.swift"; sourceTree = "<group>"; };
-		D8F765C121AAEFA6009D6468 /* RxGesture_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8F765C121AAEFA6009D6468 /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F765CB21AAF0A3009D6468 /* UITapGestureRecognizer+RxGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+RxGesture.swift"; sourceTree = "<group>"; };
 		D8F765CF21AAF11B009D6468 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F4CC4C1D1DEBA895009ED835 /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,9 +132,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				874DD3F61FAE4EE100A61D4F /* RxCocoa.framework in Frameworks */,
+				D8837ED9229F717800901C40 /* RxCocoa.framework in Frameworks */,
 				87F8F7371E511E9D00C3B1BE /* Foundation.framework in Frameworks */,
-				874DD3F91FAE4EE100A61D4F /* RxSwift.framework in Frameworks */,
+				D8837ED4229F699800901C40 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +142,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8837EDA229F718900901C40 /* RxSwift.framework in Frameworks */,
+				D8837EDB229F718900901C40 /* RxCocoa.framework in Frameworks */,
 				D8F765D021AAF11C009D6468 /* Foundation.framework in Frameworks */,
-				D8F765CD21AAF114009D6468 /* RxCocoa.framework in Frameworks */,
-				D8F765CE21AAF117009D6468 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +225,7 @@
 				F4CC4C1D1DEBA895009ED835 /* RxGesture.framework */,
 				87F8F7221E511E2E00C3B1BE /* RxGesture.framework */,
 				874DD3E71FAD0F7D00A61D4F /* RxGesture-iOS-Tests.xctest */,
-				D8F765C121AAEFA6009D6468 /* RxGesture_tvOS.framework */,
+				D8F765C121AAEFA6009D6468 /* RxGesture.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,6 +259,10 @@
 		F4CC4C4E1DEBACC7009ED835 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8837ECE229F697200901C40 /* RxCocoa.framework */,
+				D8837ED3229F699800901C40 /* RxCocoa.framework */,
+				D8837ECF229F697200901C40 /* RxSwift.framework */,
+				D8837ED2229F699800901C40 /* RxSwift.framework */,
 				D8F765CF21AAF11B009D6468 /* Foundation.framework */,
 				874DD3F31FAE4EE000A61D4F /* RxCocoa.framework */,
 				874DD3F41FAE4EE000A61D4F /* RxSwift.framework */,
@@ -279,6 +287,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8837ECD229F67CF00901C40 /* RxGesture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +326,8 @@
 			buildConfigurationList = 87F8F7291E511E2E00C3B1BE /* Build configuration list for PBXNativeTarget "RxGesture-OSX" */;
 			buildPhases = (
 				87F8F71D1E511E2E00C3B1BE /* Sources */,
-				87F8F71E1E511E2E00C3B1BE /* Frameworks */,
 				87F8F71F1E511E2E00C3B1BE /* Headers */,
+				87F8F71E1E511E2E00C3B1BE /* Frameworks */,
 				87F8F7201E511E2E00C3B1BE /* Resources */,
 			);
 			buildRules = (
@@ -345,7 +354,7 @@
 			);
 			name = "RxGesture-tvOS";
 			productName = tvOS;
-			productReference = D8F765C121AAEFA6009D6468 /* RxGesture_tvOS.framework */;
+			productReference = D8F765C121AAEFA6009D6468 /* RxGesture.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		F4CC4C1C1DEBA895009ED835 /* RxGesture-iOS */ = {
@@ -353,8 +362,8 @@
 			buildConfigurationList = F4CC4C251DEBA895009ED835 /* Build configuration list for PBXNativeTarget "RxGesture-iOS" */;
 			buildPhases = (
 				F4CC4C181DEBA895009ED835 /* Sources */,
-				F4CC4C191DEBA895009ED835 /* Frameworks */,
 				F4CC4C1A1DEBA895009ED835 /* Headers */,
+				F4CC4C191DEBA895009ED835 /* Frameworks */,
 				F4CC4C1B1DEBA895009ED835 /* Resources */,
 			);
 			buildRules = (
@@ -398,11 +407,12 @@
 				};
 			};
 			buildConfigurationList = F4CC4C171DEBA895009ED835 /* Build configuration list for PBXProject "RxGesture" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F4CC4C131DEBA895009ED835;
 			productRefGroup = F4CC4C1E1DEBA895009ED835 /* Products */;
@@ -558,7 +568,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "RxGesture-iOS-Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = RxSwiftCommunity.RxGesture.iOS.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -581,7 +595,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "RxGesture-iOS-Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = RxSwiftCommunity.RxGesture.iOS.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -603,7 +621,11 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = RxGesture/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = RxSwiftCommunity.RxGesture.macOS;
 				PRODUCT_NAME = RxGesture;
@@ -626,7 +648,11 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = RxGesture/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = RxSwiftCommunity.RxGesture.macOS;
 				PRODUCT_NAME = RxGesture;
@@ -638,57 +664,67 @@
 		D8F765C621AAEFA6009D6468 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = ../Carthage/Build/tvOS;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = RxGesture/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_FAST_MATH = "";
 				PRODUCT_BUNDLE_IDENTIFIER = RxSwiftCommunity.RxGesture.tvOS;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = RxGesture;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.1;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
 		D8F765C721AAEFA6009D6468 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = ../Carthage/Build/tvOS;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = RxGesture/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_FAST_MATH = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = "";
 				PRODUCT_BUNDLE_IDENTIFIER = RxSwiftCommunity.RxGesture.tvOS;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = RxGesture;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.1;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -696,6 +732,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -742,13 +779,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -759,6 +795,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -799,11 +836,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -825,7 +862,11 @@
 				INFOPLIST_FILE = RxGesture/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = RxSwiftCommunity.RxGesture.iOS;
 				PRODUCT_NAME = RxGesture;
 				SKIP_INSTALL = YES;
@@ -848,7 +889,11 @@
 				INFOPLIST_FILE = RxGesture/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = RxSwiftCommunity.RxGesture.iOS;
 				PRODUCT_NAME = RxGesture;
 				SKIP_INSTALL = YES;
