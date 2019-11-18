@@ -15,11 +15,10 @@ workflows:
         - content: |-
             #!/bin/bash
             set -ex
-            
+
             ### Cleanup, build, archive
             rm -rf ./Carthage/ ./DerivedData
-            carthage build --no-skip-current --platform "iOS,tvOS"
-            zip -r $ARTIFACT ./Carthage/Build
+            ./build.sh
 
             ### Generate release number
             # Release number consist of the latest release version of the upstream repo
