@@ -1,0 +1,10 @@
+RxGesture-iOS:
+  project: RxGesture/RxGesture.xcodeproj
+  sdks:
+  - iphonesimulator
+  - iphoneos
+RxGesture-tvOS:
+  project: RxGesture/RxGesture.xcodeproj
+  sdks:
+  - appletvos
+  - appletvsimulator
