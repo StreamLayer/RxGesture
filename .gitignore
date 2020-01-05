@@ -65,3 +65,6 @@ fastlane/screenshots
 Example/Pods
 
 .DS_Store
+node_modules
+*.lock
+*.zip
