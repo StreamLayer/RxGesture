@@ -31,7 +31,8 @@ workflows:
               --include ../RxSwift/rxswift.json \
               --include ../RxSwift/rxrelay.json \
               --include ../RxSwift/rxblocking.json \
-              --include ../RxSwift/rxtest.json
+              --include ../RxSwift/rxtest.json \
+              --rename slr:rx
 
             xcconfig=$(mktemp /tmp/static.xcconfig.XXXXXX)
             trap 'rm -f "$xcconfig"; git checkout -- "$DIR"' INT TERM HUP EXIT
