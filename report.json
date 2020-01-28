@@ -1,1 +1,1 @@
-{"identifiers":["TargetView","Factory","SwipeDirection","TransformGestureRecognizers","TouchDownGestureRecognizer","ForceTouchGestureRecognizer","TransformVelocity","GestureRecognizerDelegatePolicy","RxGestureRecognizerDelegate"],"products":["RxGesture"],"prefix":"SLR_","fnReplace":[]}
+{"identifiers":["TransformGestureRecognizers","TargetView","RxGestureRecognizerDelegate","TransformVelocity","TouchDownGestureRecognizer","GestureRecognizerDelegatePolicy","ForceTouchGestureRecognizer","SwipeDirection","Factory"],"products":["RxGesture"],"prefix":"SLR_","fnReplace":[]}
