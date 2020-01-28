@@ -2,8 +2,8 @@
   "private": true,
   "name": "@streamlayer/rxgesture",
   "dependencies": {
-    "@semantic-release/exec": "^4.0.0",
-    "@semantic-release/git": "^8.0.0",
-    "semantic-release": "^16.0.1"
+    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "semantic-release": "^17.0.0"
   }
 }
